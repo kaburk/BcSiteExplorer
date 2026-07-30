@@ -1,0 +1,72 @@
+<?php
+/**
+ * BcSiteExplorer カスタマイズ設定
+ *
+ * このファイルを setting_customize.php にリネームして使用してください。
+ * setting.php の値をここで上書きできます。
+ * setting_customize.php は .gitignore に含まれているため、
+ * リポジトリにコミットされません。
+ */
+
+$customize_config = [
+    'BcSiteExplorer' => [
+        /**
+         * エクスポート列（CSV / Excel）
+         *
+         * 配列の順序がそのまま列の出力順になる。不要な列はキーを削除する。
+         * 利用できる列キー:
+         *   no                  ... 行番号
+         *   url                 ... URL
+         *   title               ... ページタイトル（HTML の title）
+         *   content_title       ... タイトル（コンテンツ管理）
+         *   content_description ... ディスクリプション（BcSeo 有効時のみ）
+         *   content_kind        ... コンテンツ種別
+         *   content_status      ... 公開状態
+         *   final_url           ... リダイレクト最終到達 URL
+         *   redirect_chain      ... リダイレクト（A → B 表記）
+         *   http_status         ... HTTP ステータス
+         *   depth               ... 深度
+         *   parent_url          ... 発見元
+         *   source              ... 検出ソース（クロール+DB / クロールのみ / DBのみ）
+         *   is_orphan           ... 孤立
+         *   meta_robots         ... meta robots
+         *   error_message       ... エラー
+         *
+         * リスト（インデックス配列）はマージではなく置換されるため、
+         * 必要な列を全て列挙する。
+         */
+        // 'exportColumns' => [
+        //     'no',
+        //     'url',
+        //     'title',
+        //     'content_title',
+        //     'content_description',
+        //     'content_kind',
+        //     'content_status',
+        //     'final_url',
+        //     'redirect_chain',
+        //     'http_status',
+        //     'depth',
+        //     'parent_url',
+        //     'source',
+        //     'is_orphan',
+        //     'meta_robots',
+        //     'error_message',
+        // ],
+
+        /**
+         * クロールの既定オプション（管理画面フォームの初期値。前回実行時の保存値があればそちらが優先）
+         */
+        // 'crawlDefaults' => [
+        //     'max_pages' => 1000,                 // 最大取得ページ数
+        //     'max_depth' => 10,                   // 最大深度
+        //     'interval_ms' => 500,                // リクエスト間隔（ミリ秒）
+        //     'timeout' => 10,                     // タイムアウト（秒）
+        //     'exclude_external' => true,          // 外部サイトを探査対象外にする
+        //     'record_external' => true,           // 外部サイトへのリンクを一覧に記録する
+        //     'verify_ssl' => true,                // SSL 証明書を検証する（自己署名証明書の環境では false）
+        //     'check_orphans' => true,             // 孤立ページの生存確認を行う
+        //     'include_blog_extra_urls' => false,  // ブログの派生 URL も DB 側から列挙する
+        // ],
+    ],
+];

@@ -1,0 +1,15 @@
+{
+    "name": "catchup/bc-site-explorer",
+    "description": "Site structure analysis and sitemap export plugin for baserCMS 5",
+    "type": "cakephp-plugin",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.1",
+        "phpoffice/phpspreadsheet": "^5.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "BcSiteExplorer\\": "src/"
+        }
+    }
+}
